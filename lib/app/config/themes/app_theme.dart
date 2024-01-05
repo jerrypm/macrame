@@ -10,6 +10,7 @@ mixin class AppTheme {
       scaffoldBackgroundColor: AppColors.background,
       pageTransitionsTheme: getPageTransitionsTheme,
       appBarTheme: const AppBarTheme(
+          centerTitle: true,
           backgroundColor: AppColors.background,
           surfaceTintColor: AppColors.background,
           elevation: 0,

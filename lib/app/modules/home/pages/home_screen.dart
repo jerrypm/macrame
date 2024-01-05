@@ -61,6 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: false,
         title: SizedBox(height: 28, child: AppLogos.macrameMini),
         actions: [
           InkWell(

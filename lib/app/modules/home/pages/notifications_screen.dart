@@ -15,6 +15,7 @@ class NotificationScreen extends StatefulWidget {
 
 class _NotificationScreenState extends State<NotificationScreen> {
   List _promo = [];
+  List _tansaction = [];
 
   @override
   void initState() {
@@ -29,8 +30,10 @@ class _NotificationScreenState extends State<NotificationScreen> {
 
     setState(() {
       _promo = data['promo'];
+      _tansaction = data['transaction'];
     });
     debugPrint(_promo.toString());
+    debugPrint(_tansaction.toString());
   }
 
   @override
@@ -116,12 +119,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
 
   ListView _buildTransactionViews() {
     return ListView.separated(
-      itemCount: 3,
+      itemCount: _tansaction.length,
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       separatorBuilder: (context, index) {
         return const Divider(thickness: 0.4);
       },
       itemBuilder: (BuildContext context, int index) {
+        var item = _tansaction[index];
         return SizedBox(
           height: 80,
           width: double.infinity,
@@ -133,26 +137,26 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 decoration: BoxDecoration(
                   color: Colors.grey,
                   borderRadius: BorderRadius.circular(8),
-                  image: const DecorationImage(
+                  image: DecorationImage(
                     fit: BoxFit.cover,
                     image: NetworkImage(
-                        'https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame1.png'),
+                      item['image_url'],
+                    ),
                   ),
                 ),
               ),
               16.width,
               Flexible(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    'Your order #123456789 has been shipped successfully'
-                        .asSubtitleNormal(
-                      fontWeight: FontWeight.w700,
-                    ),
+                    item['title'].toString().asSubtitleNormal(
+                          fontWeight: FontWeight.w700,
+                        ),
                     8.height,
-                    'Please help us to confirm and rate your order to get 10% discount code for next order.'
-                        .asSubtitleSmall(
-                      color: Colors.grey,
-                    ),
+                    item['description'].toString().asSubtitleSmall(
+                          color: Colors.grey,
+                        ),
                   ],
                 ),
               ),
