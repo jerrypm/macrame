@@ -77,7 +77,7 @@ class _HomeBannerWidgetState extends State<HomeBannerWidget> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
-                4,
+                _banners.length,
                 (index) => AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
                   margin: const EdgeInsets.only(right: 8),
