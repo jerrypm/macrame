@@ -1,0 +1,34 @@
+{
+    "reviews": [
+      {
+        "id": 12,
+        "product_name": "Leaf Wall Hanging",
+        "price": 220000,
+        "currency": "Rp",
+        "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame4.png",
+        "date": "2023-12-15",
+        "stars": 4,
+        "description": "It's pretty good, I'll order more later, I hope it's good, sis, I need more products please"
+      },
+      {
+        "id": 34,
+        "product_name": "Leather Bags",
+        "price": 540000,
+        "currency": "Rp",
+        "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame2.png",
+        "date": "2023-11-28",
+        "stars": 5,
+        "description": "I am very satisfied with this product"
+      },
+      {
+        "id": 30,
+        "product_name": "Two Pillow",
+        "price": 880000,
+        "currency": "Rp",
+        "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame3.png",
+        "date": "2024-01-03",
+        "stars": 2,
+        "description": "not good, not suitable"
+      }
+    ]
+  }

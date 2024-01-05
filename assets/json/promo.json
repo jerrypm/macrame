@@ -1,0 +1,50 @@
+{
+    "promo": [
+      {
+        "id": 122,
+        "url": "https://www.tokopedia.com/discovery/deals",
+        "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/promo1.png",
+        "description": "Discover a world of possibilities as you explore our diverse range of Macrame products, from stunning wall hangings to chic plant hangers. Each piece is designed to add a unique flair to your home or office, creating a warm and inviting atmosphere. Bring nature indoors with our plant hangers, showcasing your favorite greenery in a stylish and trendy way."
+      },
+      {
+        "id": 123,
+        "url": "https://www.tokopedia.com/discovery/deals",
+        "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/promo1.png",
+        "description": "Discover a world of possibilities as you explore our diverse range of Macrame products, from stunning wall hangings to chic plant hangers. Each piece is designed to add a unique flair to your home or office, creating a warm and inviting atmosphere. Bring nature indoors with our plant hangers, showcasing your favorite greenery in a stylish and trendy way."
+      }
+    ],
+    "transaction": [
+      {
+        "id": 2213,
+        "title": "Your order #123456789 has been canceled",
+        "description": "Order is cancel, please repeat the order",
+        "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame5.png",
+        "type": "cancel",
+        "timestamp": 1639577400
+      },
+      {
+        "id": 2214,
+        "title": "Your order #123456789 has been confirmed",
+        "description": "We will receive your order immediately, please wait",
+        "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame5.png",
+        "type": "confirmed",
+        "timestamp": 1639580700
+      },
+      {
+        "id": 2215,
+        "title": "Your order #123456789 has been shipped",
+        "description": "Your item is being delivered to your address, please let me know when the item has arrived",
+        "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame5.png",
+        "type": "shipped",
+        "timestamp": 1639650000
+      },
+      {
+        "id": 2216,
+        "title": "Your order #123456789 has been arrived",
+        "description": "Your order has arrived, please help share our products to improve local products",
+        "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame5.png",
+        "type": "arrived",
+        "timestamp": 1639913400
+      }
+    ]
+  }

@@ -1,0 +1,90 @@
+{
+    "orders": [
+      {
+        "order_id": 12425232,
+        "quantity": 4,
+        "status": "delivered",
+        "date": "2023-12-08",
+        "product_items": [
+          {
+            "title": "Leaf Wall Hanging",
+            "amount": 120000,
+            "items": 3,
+            "currency": "Rp",
+            "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame5.png"
+          },
+          {
+            "title": "Leather Bags",
+            "amount": 75000,
+            "items": 1,
+            "currency": "Rp",
+            "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame2.png"
+          },
+          {
+            "title": "Two Pillow",
+            "amount": 85000,
+            "items": 1,
+            "currency": "Rp",
+            "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame5.png"
+          }
+        ],
+        "shipping_cost": 34000,
+        "product_price": 520000,
+        "total_price": 554000
+      },
+      {
+        "order_id": 16278822,
+        "quantity": 2,
+        "status": "delivered",
+        "date": "2023-12-08",
+        "product_items": [
+          {
+            "title": "Leaf Wall Hanging",
+            "amount": 120000,
+            "items": 2,
+            "currency": "Rp",
+            "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame5.png"
+          }
+        ],
+        "shipping_cost": 14000,
+        "product_price": 240000,
+        "total_price": 254000
+      },
+      {
+        "order_id": 14525232,
+        "quantity": 1,
+        "status": "processing",
+        "date": "2023-12-08",
+        "product_items": [
+          {
+            "title": "Two Pillow",
+            "amount": 85000,
+            "items": 1,
+            "currency": "Rp",
+            "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame5.png"
+          }
+        ],
+        "shipping_cost": 18000,
+        "product_price": 85000,
+        "total_price": 103000
+      },
+      {
+        "order_id": 10921211,
+        "quantity": 7,
+        "status": "canceled",
+        "date": "2023-12-08",
+        "product_items": [
+          {
+            "title": "Hang Plant",
+            "amount": 120000,
+            "items": 7,
+            "currency": "Rp",
+            "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame1.png"
+          }
+        ],
+        "shipping_cost": 0,
+        "product_price": 840000,
+        "total_price": 840000
+      }
+    ]
+  }

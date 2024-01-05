@@ -1,0 +1,20 @@
+{
+    "banners": [
+      {
+        "id": 1,
+        "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/banner.png",
+        "alt_text": "Banner 1"
+      },
+       {
+        "id": 2,
+        "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/banner1.png",
+        "alt_text": "Banner 2"
+      },
+      {
+        "id": 3,
+        "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/banner.png",
+        "alt_text": "Banner 3"
+      }
+    ]
+  }
+  

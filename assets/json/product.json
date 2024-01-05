@@ -1,0 +1,134 @@
+{
+    "products": [
+      {
+        "id_item": "1321",
+        "product_name": "Hang Plant",
+        "product_description": "Whether you're a seasoned Macrame enthusiast or a newcomer to the art, our collection caters to all skill levels. Embrace the art of knotting and transform your space into a haven of style and sophistication. ",
+        "product_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame1.png",
+        "catalog_type": "Wall",
+        "product_price": {
+          "amount": 120000,
+          "currency": "Rp"
+        },
+        "product_details": [
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread31.png",
+            "detail_title": "Cultured"
+          },
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread32.png",
+            "detail_title": "Outer Space"
+          }
+        ]
+      },
+      {
+        "id_item": "2121",
+        "product_name": "Leather Bags",
+        "product_description": "An elegant ceramic vase with a vintage touch, perfect for displaying your favorite flowers.",
+        "product_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame2.png",
+        "catalog_type": "bags",
+        "product_price": {
+          "amount": 85000,
+          "currency": "Rp"
+        },
+        "product_details": [
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread31.png",
+            "detail_title": "Cultured"
+          },
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread34.png",
+            "detail_title": "Orchid (Crayola)"
+          },
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread32.png",
+            "detail_title": "Outer Space"
+          }
+        ]
+      },
+      {
+        "id_item": "3451",
+        "product_name": "Two Pillow",
+        "product_description": "Stay warm and stylish with this cozy knitted blanket, available in various colors.",
+        "product_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame3.png",
+        "catalog_type": "home_decor",
+        "product_price": {
+          "amount": 75000,
+          "currency": "Rp"
+        },
+        "product_details": [
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread32.png",
+            "detail_title": "Outer Space"
+          },
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread36.png",
+            "detail_title": "Culture"
+          }
+        ]
+      },
+      {
+        "id_item": "5651",
+        "product_name": "Leaf Wall Hanging",
+        "product_description": "A macramé masterpiece featuring intricately crafted leaves in four harmonious colors.",
+        "product_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame4.png",
+        "catalog_type": "Wall",
+        "product_price": {
+          "amount": 55000,
+          "currency": "Rp"
+        },
+        "product_details": [
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread35.png",
+            "detail_title": "Jasper Orange"
+          },
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread37.png",
+            "detail_title": "purpel Bell"
+          },
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread36.png",
+            "detail_title": "Culture"
+          },
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread32.png",
+            "detail_title": "Outer Space"
+          }
+        ]
+      },
+      {
+        "id_item": "8661",
+        "product_name": "Modern Blanket",
+        "product_description": "Add a touch of modernity to your space with this geometric-patterned rug in vibrant colors.",
+        "product_image": "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71LoTUxPKHL._AC_UL400_.jpg",
+        "catalog_type": "home_decor",
+        "product_price": {
+          "amount": 95000,
+          "currency": "Rp"
+        },
+        "product_details": [
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread36.png",
+            "detail_title": "Culture"
+          }
+        ]
+      },
+      {
+        "id_item": "3331",
+        "product_name": "Cream Bag",
+        "product_description": "Upgrade your kitchen with this durable and stylish stainless steel kitchen set.",
+        "product_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame5.png",
+        "catalog_type": "bag",
+        "product_price": {
+          "amount": 175000,
+          "currency": "Rp"
+        },
+        "product_details": [
+          {
+            "detail_image": "https://raw.githubusercontent.com/jerrypm/nextproject/master/thread36.png",
+            "detail_title": "Culture"
+          }
+        ]
+      }
+    ]
+  }
