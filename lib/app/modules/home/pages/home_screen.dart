@@ -24,7 +24,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  String selectedCategory = HomeCategory.wall.name;
+  String selectedCategory = HomeCategory.all.name;
 
   List _products = [];
   List _filteredProducts = [];

@@ -42,6 +42,8 @@ class AppIcons {
   static var unactiveNotif = _buildImageUnActive('bell');
 
   // Home menu
+  static var activeAll = _buildImageActive('all');
+  static var unactiveAll = _buildImageUnActive('all');
   static var activeWallArt = _buildImageActive('wall-art');
   static var unactiveWallArt = _buildImageUnActive('wall-art');
   static var activePlant = _buildImageActive('plant');

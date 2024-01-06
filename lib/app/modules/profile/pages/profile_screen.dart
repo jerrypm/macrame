@@ -47,7 +47,9 @@ class ProfileScreen extends StatelessWidget {
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      context.goNamed(AppRoutes.login.name);
+                    },
                   ),
                 ),
                 50.width,
@@ -60,7 +62,9 @@ class ProfileScreen extends StatelessWidget {
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      context.pop();
+                    },
                   ),
                 )
               ],

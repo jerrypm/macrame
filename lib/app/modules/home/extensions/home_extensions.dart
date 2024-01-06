@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../config/themes/app_icons.dart';
 
 enum HomeCategory {
+  all,
   wall,
   pot,
   bag,
@@ -14,6 +15,8 @@ enum HomeCategory {
 extension HomeCategoryExtension on HomeCategory {
   String get name {
     switch (this) {
+      case HomeCategory.all:
+        return 'All';
       case HomeCategory.wall:
         return 'Wall';
       case HomeCategory.pot:
@@ -33,6 +36,8 @@ extension HomeCategoryExtension on HomeCategory {
 
   String get catalogType {
     switch (this) {
+      case HomeCategory.all:
+        return 'all';
       case HomeCategory.wall:
         return 'wall';
       case HomeCategory.pot:
@@ -46,12 +51,14 @@ extension HomeCategoryExtension on HomeCategory {
       case HomeCategory.jawerly:
         return 'wall';
       default:
-        return 'wall';
+        return 'all';
     }
   }
 
   Widget get iconActive {
     switch (this) {
+      case HomeCategory.all:
+        return AppIcons.activeAll;
       case HomeCategory.wall:
         return AppIcons.activeWallArt;
       case HomeCategory.pot:
@@ -71,6 +78,8 @@ extension HomeCategoryExtension on HomeCategory {
 
   Widget get iconUnactive {
     switch (this) {
+      case HomeCategory.all:
+        return AppIcons.unactiveAll;
       case HomeCategory.wall:
         return AppIcons.unactiveWallArt;
       case HomeCategory.pot:
