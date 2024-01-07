@@ -36,8 +36,11 @@ extension AppTextExtensions on String {
         ),
       );
 
-  Widget asTitleSmall({Color? color, FontWeight? fontWeight}) => Text(
+  Widget asTitleSmall(
+          {Color? color, FontWeight? fontWeight, TextAlign? textAlign}) =>
+      Text(
         this,
+        textAlign: textAlign,
         style: TextStyle(
           fontSize: 16,
           color: color,

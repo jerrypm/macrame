@@ -1,4 +1,5 @@
 enum SearchByCatalog {
+  all,
   wallHanging,
   plantHangers,
   macrameBags,
@@ -9,6 +10,8 @@ enum SearchByCatalog {
 extension SearchByCatalogExtensions on SearchByCatalog {
   String get name {
     switch (this) {
+      case SearchByCatalog.all:
+        return 'All';
       case SearchByCatalog.wallHanging:
         return 'Wall Hanging';
       case SearchByCatalog.plantHangers:
@@ -26,6 +29,8 @@ extension SearchByCatalogExtensions on SearchByCatalog {
 
   String get catalogType {
     switch (this) {
+      case SearchByCatalog.all:
+        return 'All';
       case SearchByCatalog.wallHanging:
         return 'wall';
       case SearchByCatalog.plantHangers:

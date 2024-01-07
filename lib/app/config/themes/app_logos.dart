@@ -10,4 +10,5 @@ class AppLogos {
   static var macrameMedium = Image.asset('assets/logos/macrame-medium.png');
   static var macrameSmall = SvgPicture.asset('assets/logos/macrame-small.svg');
   static var macrameMini = Image.asset('assets/logos/macrame-mini.png');
+  static var emptyState = Image.asset('assets/images/empty-state.png');
 }
