@@ -93,6 +93,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
     if (_products['product_details'] != null) {
       productDetails = _products['product_details'];
     }
+
+    List<Color> productColors = [];
+    for (var detail in productDetails) {
+      String hexColor = detail["color"];
+      Color dynamicColor = Color(int.parse("0xFF$hexColor"));
+      productColors.add(dynamicColor);
+    }
+
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -162,8 +170,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 ),
                                 child: CircleAvatar(
                                   radius: 28.0,
-                                  backgroundColor:
-                                      DetailsColor.values[index].color,
+                                  backgroundColor: Color(int.parse(
+                                      "0xFF${productDetails[index]['color']}")),
+                                  // DetailsColor.values[index].color,
                                 ),
                               ),
                             ),

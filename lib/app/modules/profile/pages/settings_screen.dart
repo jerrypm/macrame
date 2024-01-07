@@ -155,19 +155,25 @@ extension SettingsCategoryExtensions on SettingsCategory {
   void webview(BuildContext context) {
     switch (this) {
       case SettingsCategory.faq:
-        context.pushNamed(AppRoutes.webViews.name,
-            pathParameters: {'url': 'https://www.google.com/'},
-            extra: {'title': 'FAQ'});
+        context.pushNamed(AppRoutes.webViews.name, pathParameters: {
+          'url': 'https://www.testingtime.com/en/faq-testusers/'
+        }, extra: {
+          'title': 'FAQ'
+        });
         break;
       case SettingsCategory.contactUs:
-        context.pushNamed(AppRoutes.webViews.name,
-            pathParameters: {'url': 'https://www.google.com/'},
-            extra: {'title': 'Contact Us'});
+        context.pushNamed(AppRoutes.webViews.name, pathParameters: {
+          'url': 'https://www.testingtime.com/en/faq-testusers/'
+        }, extra: {
+          'title': 'Contact Us'
+        });
         break;
       case SettingsCategory.privacyAndPolicy:
-        context.pushNamed(AppRoutes.webViews.name,
-            pathParameters: {'url': 'https://www.google.com/'},
-            extra: {'title': 'Privacy and Policy'});
+        context.pushNamed(AppRoutes.webViews.name, pathParameters: {
+          'url': 'https://www.testingtime.com/en/faq-testusers/'
+        }, extra: {
+          'title': 'Privacy and Policy'
+        });
         break;
       default:
     }
