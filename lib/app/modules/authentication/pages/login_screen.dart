@@ -71,9 +71,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     12.height,
                     Align(
                       alignment: Alignment.centerRight,
-                      child: 'Forgot your password?'.asSubtitleNormal(
-                        color: AppColors.spanishGray,
-                        fontWeight: FontWeight.w400,
+                      child: GestureDetector(
+                        onTap: () {
+                          context.goNamed(AppRoutes.forgotPassword.name);
+                        },
+                        child: 'Forgot your password?'.asSubtitleNormal(
+                          // here
+                          color: AppColors.spanishGray,
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ),
                     const Spacer(),
@@ -83,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: AppElevatedButtonWidget(
                         onPressed: () {
                           if (_validateLogin()) {
-                            context.showErrorSnackbar('Message');
+                            context.showErrorSnackbar('Empty Field');
                           } else {
                             context.goNamed(AppRoutes.home.name);
                           }

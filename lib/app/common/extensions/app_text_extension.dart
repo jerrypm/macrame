@@ -18,6 +18,15 @@ extension AppTextExtensions on String {
         ),
       );
 
+  Widget asTitleSemiBig({Color? color, FontWeight? fontWeight}) => Text(
+        this,
+        style: TextStyle(
+          fontSize: 24,
+          color: color,
+          fontWeight: fontWeight ?? FontWeight.w600,
+        ),
+      );
+
   Widget asTitleNormal({Color? color, FontWeight? fontWeight}) => Text(
         this,
         style: TextStyle(

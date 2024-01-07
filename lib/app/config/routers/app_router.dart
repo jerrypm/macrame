@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../modules/authentication/pages/login_screen.dart';
 import '../../modules/authentication/pages/register_screen.dart';
+import '../../modules/authentication/pages/forgot_password_screen.dart';
 import '../../modules/bookmark/pages/bookmark_screen.dart';
 import '../../modules/cart/pages/cart_screen.dart';
 import '../../modules/details/pages/details_screen.dart';
@@ -35,12 +36,21 @@ mixin class AppRouter {
           },
         ),
         GoRoute(
-          name: AppRoutes.login.name,
-          path: AppRoutes.login.path,
-          builder: (context, state) {
-            return const LoginScreen();
-          },
-        ),
+            name: AppRoutes.login.name,
+            path: AppRoutes.login.path,
+            builder: (context, state) {
+              return const LoginScreen();
+            },
+            routes: [
+              GoRoute(
+                parentNavigatorKey: rootNavigatorKey,
+                name: AppRoutes.forgotPassword.name,
+                path: AppRoutes.forgotPassword.name,
+                builder: (context, state) {
+                  return const ForgotPasswordScreen();
+                },
+              ),
+            ]),
         GoRoute(
           name: AppRoutes.register.name,
           path: AppRoutes.register.path,
