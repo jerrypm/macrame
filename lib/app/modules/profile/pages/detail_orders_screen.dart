@@ -54,6 +54,7 @@ class _DetailsOrdersScreenState extends State<DetailsOrdersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
         title: 'Detail Order'.asTitleSmall(
@@ -122,73 +123,83 @@ class _DetailsOrdersScreenState extends State<DetailsOrdersScreen> {
   Future<dynamic> _buildShowModalBottomSheet(BuildContext context) {
     return showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       backgroundColor: Colors.white,
       showDragHandle: true,
       builder: (context) {
-        return Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              'Write Review'.asTitleSmall(
-                fontWeight: FontWeight.w400,
-              ),
-              12.height,
-              SizedBox(
-                height: 187,
-                child: TextFormField(
-                  expands: true,
-                  maxLines: null,
-                  maxLength: null,
-                  cursorColor: AppColors.arsenic,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: AppColors.background,
-                    isDense: true,
-                    isCollapsed: true,
-                    contentPadding: const EdgeInsets.all(12),
-                    hintText:
-                        "Whether you're a seasoned Macrame enthusiast or a newcomer to the art, our collection caters to all skill levels",
-                    hintStyle: const TextStyle(
-                      overflow: TextOverflow.clip,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: const BorderSide(
-                        color: AppColors.darkGrey,
+        double keyboardHeight = MediaQuery.of(context).viewInsets.bottom;
+
+        return SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.only(
+              bottom: keyboardHeight,
+              left: 16,
+              right: 16,
+              top: 16,
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                'Write Review'.asTitleSmall(
+                  fontWeight: FontWeight.w400,
+                ),
+                12.height,
+                SizedBox(
+                  height: (187),
+                  child: TextFormField(
+                    expands: true,
+                    maxLines: null,
+                    maxLength: null,
+                    cursorColor: AppColors.arsenic,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: AppColors.background,
+                      isDense: true,
+                      isCollapsed: true,
+                      contentPadding: const EdgeInsets.all(12),
+                      hintText:
+                          "Whether you're a seasoned Macrame enthusiast or a newcomer to the art, our collection caters to all skill levels",
+                      hintStyle: const TextStyle(
+                        overflow: TextOverflow.clip,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
                       ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: const BorderSide(
-                        color: AppColors.darkGrey,
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: const BorderSide(
+                          color: AppColors.darkGrey,
+                        ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: const BorderSide(
+                          color: AppColors.darkGrey,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              24.height,
-              SizedBox(
-                height: 48,
-                width: double.infinity,
-                child: AppElevatedButtonWidget(
-                  onPressed: () {
-                    context.pop();
-                  },
-                  radius: 8,
-                  elevation: 8,
-                  shodowColor: const Color(0xFF303030).withOpacity(0.25),
-                  child: 'Publish Review'.asTitleSmall(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
+                24.height,
+                SizedBox(
+                  height: 48,
+                  width: double.infinity,
+                  child: AppElevatedButtonWidget(
+                    onPressed: () {
+                      context.pop();
+                    },
+                    radius: 8,
+                    elevation: 8,
+                    shodowColor: const Color(0xFF303030).withOpacity(0.25),
+                    child: 'Publish Review'.asTitleSmall(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
-              ),
-              32.height,
-            ],
+                32.height,
+              ],
+            ),
           ),
         );
       },
