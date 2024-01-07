@@ -1,0 +1,14 @@
+{
+  "user_profile": {
+    "id_user": 912,
+    "fullname": "Clariasa Mukh",
+    "email": "claata3@gmail.com",
+    "total_orders": 5,
+    "status_orders": {
+      "delivered": 2,
+      "shipping": 1,
+      "processing": 1,
+      "canceled": 1
+    }
+  }
+}

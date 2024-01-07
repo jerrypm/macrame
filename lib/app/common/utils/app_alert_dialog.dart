@@ -30,7 +30,7 @@ extension ShowDialogExtension on BuildContext {
           actions: [
             TextButton(
               onPressed: () {
-                // Navigator.of(context).pop();
+                Navigator.of(context).pop();
               },
               child: const Text('OK'),
             ),
