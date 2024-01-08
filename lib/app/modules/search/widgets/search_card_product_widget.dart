@@ -63,7 +63,7 @@ class SearchCardProductWidget extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
               8.height,
-              'Rp. 120.000'.asSubtitleBig(
+              '\$ 120'.asSubtitleBig(
                 fontWeight: FontWeight.w700,
               ),
             ],

@@ -118,7 +118,7 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
                     num price = productList[index]['product_price']['amount'];
                     return BookmarkCardProductWidget(
                       name: item['product_name'],
-                      price: price.toCurrencyRP(),
+                      price: price.toCurrency$(),
                       imageUrl: item['product_image'],
                       onRemove: () async {
                         await AppPrefs.removeJsonByIdFromSharedPreferences(

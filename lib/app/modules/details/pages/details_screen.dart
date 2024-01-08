@@ -87,7 +87,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
     num? amount = _products['product_price']?['amount'];
 
     if (amount != null) {
-      price = amount.toCurrencyRP();
+      price = amount.toCurrency$();
     }
     List productDetails = [];
     if (_products['product_details'] != null) {

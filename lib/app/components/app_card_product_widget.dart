@@ -7,7 +7,7 @@ class AppCardProductWidget extends StatelessWidget {
   const AppCardProductWidget({
     super.key,
     this.name = 'Product title',
-    this.price = 'Rp 100.000',
+    this.price = '\$ 1000',
     this.imageUrl =
         'https://i.pinimg.com/474x/a0/08/f6/a008f65c4fe17d5deff055e70c4b54ed.jpg',
     this.onDetails,

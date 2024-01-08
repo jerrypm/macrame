@@ -1,7 +1,11 @@
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
 import 'package:macrame_app/app/common/extensions/app_size_extension.dart';
 import 'package:macrame_app/app/common/extensions/app_text_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:macrame_app/app/modules/cart/models/cart_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../components/app_elevated_button_widget.dart';
@@ -16,7 +20,9 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
-  final String phoneNumber = '+6285959327933';
+  List<CartItem> cartItems = [];
+  double totalPrice = 0;
+  final String phoneNumber = '+01122'; // fill the number here
   final String message = 'Hello, this is a pre-filled message!';
 
   Future<void> launchWhatsApp() async {
@@ -28,6 +34,31 @@ class _CartScreenState extends State<CartScreen> {
     } else {
       debugPrint('Could not launch WhatsApp');
     }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    cartJson();
+  }
+
+  Future<void> cartJson() async {
+    try {
+      final String response =
+          await rootBundle.loadString('assets/json/cart.json');
+      final Map<String, dynamic> data = json.decode(response);
+
+      setState(() {
+        ShoppingCart shoppingCart = ShoppingCart.fromJson(data);
+        cartItems = shoppingCart.cart;
+      });
+    } catch (error) {
+      print('Error loading JSON: $error');
+    }
+  }
+
+  double calculateTotalPrice(List<CartItem> cartItems) {
+    return cartItems.fold(0, (sum, item) => sum + (item.price * item.quantity));
   }
 
   @override
@@ -49,9 +80,12 @@ class _CartScreenState extends State<CartScreen> {
         ),
       ),
       body: ListView.builder(
-        itemCount: 2,
+        itemCount: cartItems.length,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         itemBuilder: (BuildContext context, int index) {
+          var item = cartItems[index];
+
+          totalPrice = calculateTotalPrice(cartItems);
           return Container(
             height: 100,
             width: double.infinity,
@@ -64,10 +98,9 @@ class _CartScreenState extends State<CartScreen> {
                   decoration: BoxDecoration(
                     color: Colors.grey,
                     borderRadius: BorderRadius.circular(8),
-                    image: const DecorationImage(
+                    image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: NetworkImage(
-                          'https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame1.png'),
+                      image: NetworkImage(item.imageUrl),
                     ),
                   ),
                 ),
@@ -79,48 +112,65 @@ class _CartScreenState extends State<CartScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          'Leaf Wall Hanging'.asSubtitleBig(
+                          item.productName.asSubtitleBig(
                             color: AppColors.spanishGray,
                           ),
                           4.height,
-                          'Rp 120.000'.asTitleSmall(
+                          '\$ ${(item.price * item.quantity).toString()}'
+                              .asTitleSmall(
                             fontWeight: FontWeight.w700,
                           ),
                           const Spacer(),
                           Row(
                             children: [
-                              Container(
-                                height: 30,
-                                width: 30,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[200],
-                                  borderRadius: BorderRadius.circular(6),
-                                ),
-                                child: const Icon(
-                                  Icons.add,
-                                  size: 24.0,
+                              GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    item.quantity++;
+                                  });
+                                },
+                                child: Container(
+                                  height: 30,
+                                  width: 30,
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey[200],
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: const Icon(
+                                    Icons.add,
+                                    size: 24.0,
+                                  ),
                                 ),
                               ),
                               16.width,
-                              const Text(
-                                '01',
-                                style: TextStyle(
+                              Text(
+                                item.quantity.toString(),
+                                style: const TextStyle(
                                   fontFamily: 'Roboto',
                                   fontSize: 17,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
                               16.width,
-                              Container(
-                                height: 30,
-                                width: 30,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[200],
-                                  borderRadius: BorderRadius.circular(6),
-                                ),
-                                child: const Icon(
-                                  Icons.remove,
-                                  size: 24.0,
+                              GestureDetector(
+                                onTap: () {
+                                  if (item.quantity > 1) {
+                                    setState(() {
+                                      item.quantity--;
+                                    });
+                                  }
+                                },
+                                child: Container(
+                                  height: 30,
+                                  width: 30,
+                                  decoration: BoxDecoration(
+                                    color: Colors.grey[200],
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: const Icon(
+                                    Icons.remove,
+                                    size: 24.0,
+                                  ),
                                 ),
                               ),
                             ],
@@ -167,9 +217,9 @@ class _CartScreenState extends State<CartScreen> {
                         color: AppColors.darkGrey,
                       ),
                       const Spacer(),
-                      const Text(
-                        'Rp 1.560.000',
-                        style: TextStyle(
+                      Text(
+                        '\$ ${totalPrice.toString()}',
+                        style: const TextStyle(
                           fontFamily: 'Roboto',
                           fontSize: 16,
                           fontWeight: FontWeight.w600,

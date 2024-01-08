@@ -231,7 +231,7 @@ class _DetailsOrdersScreenState extends State<DetailsOrdersScreen> {
                     fontWeight: FontWeight.w400,
                   ),
                   const Spacer(),
-                  shippingCost.toCurrencyRP().asSubtitleBig(),
+                  shippingCost.toCurrency$().asSubtitleBig(),
                 ],
               ),
               8.height,
@@ -241,7 +241,7 @@ class _DetailsOrdersScreenState extends State<DetailsOrdersScreen> {
                     fontWeight: FontWeight.w400,
                   ),
                   const Spacer(),
-                  productPrice.toCurrencyRP().asSubtitleBig(),
+                  productPrice.toCurrency$().asSubtitleBig(),
                 ],
               ),
             ],
@@ -255,7 +255,7 @@ class _DetailsOrdersScreenState extends State<DetailsOrdersScreen> {
                 fontWeight: FontWeight.w700,
               ),
               const Spacer(),
-              totalPrice.toCurrencyRP().asSubtitleBig(
+              totalPrice.toCurrency$().asSubtitleBig(
                     fontWeight: FontWeight.w700,
                   ),
             ],
@@ -316,7 +316,7 @@ class _DetailsOrdersScreenState extends State<DetailsOrdersScreen> {
       itemBuilder: (BuildContext context, int index) {
         var item = _order['product_items'][index];
         num a = item['amount'];
-        var price = a.toCurrencyRP();
+        var price = a.toCurrency$();
         return Container(
           height: 100,
           width: double.infinity,

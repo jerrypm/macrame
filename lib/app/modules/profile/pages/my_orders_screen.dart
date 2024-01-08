@@ -210,7 +210,7 @@ class OrderTab extends StatelessWidget {
                           ),
                           children: [
                             TextSpan(
-                              text: totalPrice.toCurrencyRP(),
+                              text: totalPrice.toCurrency$(),
                               style: const TextStyle(
                                 color: AppColors.raisinBlack,
                               ),

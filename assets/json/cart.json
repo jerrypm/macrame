@@ -1,0 +1,18 @@
+{
+  "cart": [
+    {
+      "id": 456,
+      "product_name": "Hang Plant",
+      "price": 120,
+      "currency": "$",
+      "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame1.png"
+    },
+    {
+      "id": 136,
+      "product_name": "Leather Bags",
+      "price": 85,
+      "currency": "$",
+      "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame2.png"
+    }
+  ]
+}

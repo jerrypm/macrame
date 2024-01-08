@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   return AppCardProductWidget(
                     imageUrl: _filteredProducts[index]['product_image'],
                     name: _filteredProducts[index]['product_name'],
-                    price: price.toCurrencyRP(),
+                    price: price.toCurrency$(),
                     onDetails: () {
                       context.pushNamed(
                         AppRoutes.details.name,

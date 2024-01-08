@@ -101,7 +101,7 @@ class _MyReviewsScreenState extends State<MyReviewsScreen> {
                             fontWeight: FontWeight.w600,
                           ),
                           8.height,
-                          price.toCurrencyRP().asSubtitleBig(
+                          price.toCurrency$().asSubtitleBig(
                                 fontWeight: FontWeight.w700,
                               ),
                         ],
