@@ -19,7 +19,7 @@ extension ProfileMenuExtension on ProfileMenu {
   }
 
   String subtitle(
-      {String orders = 'Already have 10 orders',
+      {String orders = 'Status Orders',
       String reviews = 'Review for 5 items'}) {
     switch (this) {
       case ProfileMenu.orders:

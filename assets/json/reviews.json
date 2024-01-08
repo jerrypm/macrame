@@ -3,7 +3,7 @@
       {
         "id": 12,
         "product_name": "Leaf Wall Hanging",
-        "price": 220000,
+        "price": 220,
         "currency": "$",
         "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame4.png",
         "date": "2023-12-15",
@@ -13,7 +13,7 @@
       {
         "id": 34,
         "product_name": "Leather Bags",
-        "price": 540000,
+        "price": 540,
         "currency": "$",
         "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame2.png",
         "date": "2023-11-28",
@@ -23,7 +23,7 @@
       {
         "id": 30,
         "product_name": "Two Pillow",
-        "price": 880000,
+        "price": 880,
         "currency": "$",
         "image_url": "https://raw.githubusercontent.com/jerrypm/nextproject/master/macrame3.png",
         "date": "2024-01-03",
